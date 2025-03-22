@@ -6,7 +6,7 @@ from docx import Document  # For reading DOCX files
 
 # Load API Key from DOCX file
 key = os.getenv("GENAI_API_KEY")
-genai.configure(api_key=key
+genai.configure(api_key=key)
 
 # Load Resume from Backend (PDF)
 def load_resume():
