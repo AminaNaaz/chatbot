@@ -3,7 +3,7 @@ import google.generativeai as genai
 from google.generativeai.types import GenerationConfig
 import PyPDF2
 from docx import Document  # For reading DOCX files
-
+import os 
 # Load API Key from DOCX file
 key = os.getenv("GENAI_API_KEY")
 genai.configure(api_key=key)
