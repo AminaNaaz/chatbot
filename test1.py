@@ -5,10 +5,8 @@ import PyPDF2
 from docx import Document  # For reading DOCX files
 
 # Load API Key from DOCX file
-doc = Document("./api_key_gemini.docx")
-key = doc.paragraphs[0].text.strip()  # Read API key correctly
-
-genai.configure(api_key=key)
+key = os.getenv("GENAI_API_KEY")
+genai.configure(api_key=key
 
 # Load Resume from Backend (PDF)
 def load_resume():
