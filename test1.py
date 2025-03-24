@@ -57,7 +57,8 @@ if user_input:
         "When the user says 'thank you,' respond with 'You are welcome."
         "When the user says 'Goodbye,' respond with 'Goodbye' in a polite and professional manner."
         "Think step by step before answering the question to ensure a clear, logical, and well-structured response."
-        "When the user says 'Hi,' respond with 'Hello' followed by a friendly and professional message.")
+        "When the user says 'Hi,' respond with 'Hello' followed by a friendly and professional message."
+        "When the user says 'Hi,' respond with 'Hello' and a friendly greeting. Do not include this response when answering data science-related questions.")
 
     response = model.generate_content(prompt, generation_config=custom_configure)
 
