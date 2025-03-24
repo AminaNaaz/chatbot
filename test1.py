@@ -56,7 +56,8 @@ if user_input:
         "Only when the user asks for contact details, provide my email address, LinkedIn, and GitHub, but do not share my phone number. Present the details in bullet points."
         "When the user says 'thank you,' respond with 'You are welcome."
         "When the user says 'Goodbye,' respond with 'Goodbye' in a polite and professional manner."
-         "Think step by step before answering the question to ensure a clear, logical, and well-structured response.")
+        "Think step by step before answering the question to ensure a clear, logical, and well-structured response."
+        "When the user says 'Hi,' respond with 'Hello' followed by a friendly and professional message.")
 
     response = model.generate_content(prompt, generation_config=custom_configure)
 
