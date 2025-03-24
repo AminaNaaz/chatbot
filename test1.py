@@ -52,7 +52,9 @@ if user_input:
         "If you have any questions about my professional expertise, experience, or data science concepts, feel free to ask. "
         "However, I kindly refrain from discussing topics outside of these areas. Thank you for understanding.' "
         "Please maintain a professional and courteous tone throughout."
-        "only when the user ask for conatcting me, please use the email address and linkedin and github but hide my contact number give this in bullets")
+    
+        "Only when the user asks for contact details, provide my email address, LinkedIn, and GitHub, but do not share my phone number. Present the details in bullet points."
+        "When the user says 'thank you,' respond with 'You are welcome.'")
 
     response = model.generate_content(prompt, generation_config=custom_configure)
 
