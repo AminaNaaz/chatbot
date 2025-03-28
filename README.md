@@ -1,57 +1,62 @@
 ## Amina's Recruitment Chatbot
-This is a Streamlit-based chatbot that answers questions about Amina’s qualifications, experience, and skills using Google's Gemini API. It processes queries based on a resume (PDF) and can also provide general information on data science.
+Amina’s Recruitment Chatbot is an AI-powered assistant designed to provide insights into Amina’s qualifications, experience, and skills in data science. It offers a seamless and interactive user experience through a real-time chat interface.
+
+## Overview
+This chatbot enables users to ask questions about Amina’s professional background while maintaining chat history for a smooth and engaging conversation. A welcome message is displayed once per session to enhance user experience.
+
+The chatbot is built using Streamlit, ensuring an intuitive and user-friendly interface.
 
 ## Features
-- Bullet Points Loads resume from a PDF file
+✅ Real-time AI Responses – Provides structured and informative answers.
+✅ Session-Based Chat Memory – Retains conversation history for a natural experience.
+✅ Interactive UI – Simple and intuitive chatbot interface.
+✅ One-Time Welcome Message – Enhances usability with a personalized greeting.
+✅ Secure API Key Handling – Protects sensitive credentials.
 
-- Bullet Points Uses Google's Gemini API for AI-powered responses
+## Project Structure
+main.py – The core file that runs the chatbot UI in Streamlit. It manages user interactions and chat history.
 
-- Bullet Points Handles user queries related to Amina’s expertise and data science
+chatbot.py – Contains the logic for generating responses based on user queries.
 
-- Bullet Points Maintains a chat history within the Streamlit session
+api_key_loader.py – Handles secure retrieval of the API key from Streamlit Secrets.
 
-- Bullet Points Provides professional responses while hiding personal contact details
+.streamlit/secrets.toml – (For deployment) Stores API keys securely in Streamlit Cloud.
+
+config.py (if applicable) – Stores configuration settings.
 
 ## How It Works
-1. Load Resume from a PDF
-The load_resume() function reads Amina’s resume from a PDF file and extracts text using PyPDF2.
+1️⃣ User enters a query in the chat interface.
+2️⃣ The chatbot processes the input and generates a relevant response.
+3️⃣ If an API key is required, it is securely fetched from Streamlit Secrets.
+4️⃣ The chatbot displays the response, updating the chat history for continuity.
 
-2. Initialize the Chatbot
-- Bullet PointsDisplays a welcome message in Streamlit UI.
+## Secure API Key Management
+To keep API keys secure, they should be stored in Streamlit Secrets rather than hardcoded in the codebase.
 
-- Bullet PointsMaintains a chat history using st.session_state["messages"].
+## For Cloud Deployment
+Navigate to Streamlit Cloud → Manage App → Secrets.
 
-3. Process User Queries
-- Bullet Points Captures user input using st.chat_input().
+Add the following entry:
 
-- Bullet Points Sends the resume and user query to Gemini API.
+API_KEY = "your-secret-key"
+The chatbot will automatically retrieve and use the key.
 
-- Bullet Points The chatbot generates a response while ensuring:
+## For Local Development
+Alternatively, the API key can be stored locally:
 
-- Bullet Points It refers to Amina’s experience in the first person (e.g., "I have experience in...").
+Create a .env file and add:
 
-- Bullet Points It answers general data science queries when relevant.
+API_KEY=your-secret-key
+Load the key in the application.
 
-- Bullet Points It avoids unrelated topics politely.
+## Deployment on Streamlit Cloud
+1️⃣ Push the latest version of the project to GitHub.
+2️⃣ Deploy the repository using Streamlit Cloud.
+3️⃣ Configure secrets to store API keys securely.
 
-- Bullet Points It shares contact details only for LinkedIn, GitHub, and email, while hiding phone numbers.
+## Contributing
+Contributions and feedback are welcome! Feel free to submit an issue or pull request for improvements.
 
-4. Display Responses
-- Bullet Points The assistant's response is displayed using st.chat_message("assistant").
-
-- Bullet Points The response is stored in st.session_state to maintain the conversation.
-
-## Customization
-- Bullet Points Update my_resume.pdf with a new resume file.
-
-- Bullet Points Modify the prompt instructions to tweak chatbot behavior.
-
-- Bullet Points Adjust the temperature and max_output_tokens for response control.
-
-## Future Improvements
-- Bullet Points Add support for DOCX resumes.
-
-- Bullet Points Implement database storage for resumes and conversations.
-
-- Bullet Points Enhance UI with Streamlit components for better interaction.
+## Contact
+For any inquiries or collaboration opportunities, feel free to reach out me aminanaazpython@gmail.com
 
