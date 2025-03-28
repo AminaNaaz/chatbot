@@ -21,6 +21,7 @@ def display_chat_history():
 def main():
     """Main function to run Streamlit chatbot UI."""
     st.title("Amina's Recruitment Chatbot")
+    st.chat_message("assistant").write("Hello! I'm your recruitment chatbot. Ask me questions about Amina's qualifications, experience, skills, or data science!")
     initialize_session()
     display_chat_history()
 
