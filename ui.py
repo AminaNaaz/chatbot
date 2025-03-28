@@ -1,5 +1,5 @@
 """
-Streamlit-based UI for Amina's Recruitment Chatbot.
+Amina's Recruitment Chatbot.
 This chatbot interacts with users to provide details about Amina's qualifications, experience, and skills in data science.
 """
 
